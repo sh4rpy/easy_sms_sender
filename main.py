@@ -29,8 +29,8 @@ def get_status(user_id):
 def sms_sender(sms_text):
     message = client.messages.create(
         body=sms_text,
-        from_='+12015488751',
-        to='+79251903465'
+        from_='from_number',
+        to='to_number'
     )
     return message.sid
 
