@@ -14,14 +14,14 @@ client = Client(account_sid, auth_token)
 
 def get_status(user_id):
     access_token = os.getenv('VK_TOKEN')
-    params = {
+    data = {
         'user_ids': user_id,
         'fields': 'online',
         'v': '5.92',
         'access_token': access_token,
     }
     response = requests.post(
-        'https://api.vk.com/method/users.get', params=params
+        'https://api.vk.com/method/users.get', data=data
     )
     return response.json()['response'][0]['online']
 
