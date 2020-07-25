@@ -11,7 +11,7 @@
 Склонируйте репозиторий:
 
 ```bash
-https://github.com/sh4rpy/easy_sms_sender.git
+git clone https://github.com/sh4rpy/easy_sms_sender.git
 ```
 
 Установите зависимости:
