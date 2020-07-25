@@ -36,9 +36,12 @@ def sms_sender(sms_text):
 
 
 if __name__ == "__main__":
-    vk_id = input("Введите id ")
-    while True:
-        if get_status(vk_id) == 1:
-            sms_sender(f'{vk_id} сейчас онлайн!')
-            break
-        time.sleep(5)
+    try:
+        vk_id = input("Введите id ")
+        while True:
+            if get_status(vk_id) == 1:
+                sms_sender(f'{vk_id} сейчас онлайн!')
+                break
+            time.sleep(5)
+    except KeyError:
+        print('Only numbers are accepted')
